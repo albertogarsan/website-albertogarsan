@@ -12,9 +12,9 @@ if (prefersDarkScheme.matches) {
 }
 
 // 2) EventListener per als canvis de mode del sistema
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e)=> {
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e) => {
     console.log("Canvi d'esquema de color en el sistema detectat")
-    if(e.matches){
+    if (e.matches) {
         document.body.classList.add("dark-theme");
     } else {
         document.body.classList.remove("dark-theme");
@@ -22,7 +22,7 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e)
 })
 
 // 3) Canvi manual del mode de color mitjançant el botó de canvi
-function darkMode() {document.body.classList.toggle("dark-theme")}
+function darkMode() { document.body.classList.toggle("dark-theme") }
 //////////////////////////////////////////////////
 
 
@@ -40,7 +40,7 @@ function composeTime() {
 
 function showBtn(selectBtn) {
     const contenidor = document.querySelector('.contenidor')
-    
+
 
     if (selectBtn === 0) {
         //primeraPart . moreabout . primera resposta
@@ -101,7 +101,7 @@ function showBtn(selectBtn) {
 
     } else if (selectBtn === 1) {
 
-        if (!document.getElementById('segonaPart')){
+        if (!document.getElementById('segonaPart')) {
             const studies = document.createElement('section')
             studies.setAttribute('id', 'segonaPart')
             studies.innerHTML = `<div class="contingut contingut__pregunta pregunta__animacio">
@@ -137,8 +137,8 @@ function showBtn(selectBtn) {
                 <p></p>
             </div>
         </div>`
-        
-        contenidor.appendChild(studies)
+
+            contenidor.appendChild(studies)
         }
 
         document.getElementById('segonaPart').style.display = 'flex';
@@ -181,7 +181,7 @@ function showBtn(selectBtn) {
         </div>
         `
 
-        contenidor.appendChild(experience)
+            contenidor.appendChild(experience)
         }
 
         document.getElementById('terceraPart').style.display = 'flex';
@@ -196,7 +196,7 @@ function showBtn(selectBtn) {
 
         document.querySelector('#terceraPart').scrollIntoView({ block: "start", behavior: "smooth" });
 
-        setTimeout(()=> {
+        setTimeout(() => {
             document.body.style.overflow = "hidden";
             grid.classList.remove('hidden')
         }, 1500)
@@ -224,13 +224,9 @@ function showBtn(selectBtn) {
             <div class="contingut contingut__resposta msg9">
                 <p class="contingut__text" id="part4_2"></p>
             </div>
-            <!-- Decim quint missatge -->
-            <div class="contingut contingut__resposta msg10">
-                <p class="contingut__text" id="part4_3"></p>
-            </div>
+            
             <!-- Decim sext missatge -->
             <div class="contingut contingut__resposta msg11">
-                <a href="albertogarsan-cv.pdf" target="_blank"><img class="contingut__imatge" src="4.jpg" alt="thumbnail-about-my-CV"></a>
                 <p class="contingut__text" id="part4_4"></p>
             </div>
             <div class="contingut contingut__resposta bottom">
@@ -244,8 +240,7 @@ function showBtn(selectBtn) {
         document.getElementById('quartaPart').style.flexDirection = 'column';
         document.querySelector('#part4_1').textContent = 'Contact me!'
         document.querySelector('#part4_2').innerHTML = '<span>Join in</span> my vision of understanding life and feel free to talk to me for in-depht contact.'
-        document.querySelector('#part4_3').innerHTML = 'Here is my social media platforms: <span><a href="https://www.instagram.com/albertogarsan_" target="_blank">instagram</a>, <a href="https://www.linkedin.com/in/albertogarciasan/" target="_blank">linkedin</a></span>'
-        document.querySelector('#part4_4').innerHTML = '<span><a href="mailto:albertogarsan@outlook.com" target="_blank">Mail me</a></span> and see my <span><a href="albertogarsan-cv.pdf" target="_blank">CV!</a></span>'
+        document.querySelector('#part4_4').innerHTML = '<span><a href="mailto:albertogarsan@outlook.com" target="_blank">Mail me</span>'
         document.querySelector('#quartaPart').querySelector('.contingut__hora').textContent = composeTime()
         document.querySelector('#quartaPart').querySelector('.contingut__hora--resposta').textContent = composeTime()
 
@@ -281,19 +276,19 @@ function iniciarXat() {
     document.getElementById('hi').innerHTML = "Hi there! My name is <span>Alberto Garsan</span>. <br>I am a Valencia-based <span>UX Engineer</span>";
     document.getElementById('text1').innerHTML = "Exploring the limits between visual design, to learn about the users, to guide them through design thinking methodolgies like double diamond and code, <span> drives me nuts!</span>";
     document.querySelector('#default').querySelector('.contingut__hora--resposta').textContent = composeTime()
-    document.querySelector('#btn1').textContent = 'More about!'
-    document.querySelector('#btn2').textContent = 'Studies?'
-    document.querySelector('#btn3').textContent = 'Experience?'
-    document.querySelector('#btn4').textContent = 'Contact me!'
+    document.querySelector('#btn1').textContent = 'About'
+    document.querySelector('#btn2').textContent = 'Career'
+    document.querySelector('#btn3').textContent = 'Experience'
+    document.querySelector('#btn4').textContent = 'Contact'
     document.querySelector('#btn5').textContent = 'Hi, again!'
 }
 
-function removeWorksPage(){
+function removeWorksPage() {
     document.body.style.overflow = "auto";
-    grid.classList.add('hidden')   
+    grid.classList.add('hidden')
 }
 
-function filterByUX(){
+function filterByUX() {
     console.log("funciona!")
     filters.forEach((filter) => {
         filter.classList.remove('active')
@@ -306,20 +301,20 @@ function filterByUX(){
     //Eliminar tots els children del parent card (resetejar)
     const currentCards = [...parentCards.children]
     // Resetejar tots els children del parentCard
-    for(let card of currentCards) {
+    for (let card of currentCards) {
         parentCards.removeChild(card)
     }
 
     /* cards.innerHTML = '' */
-    
+
     //Omplir el parentCards amb els uxCards
     uxCards.forEach(card => {
         parentCards.appendChild(card)
     });
-    
+
 }
 
-function filterByFrontend(){
+function filterByFrontend() {
     console.log("funciona!")
     filters.forEach((filter) => {
         filter.classList.remove('active')
@@ -332,20 +327,20 @@ function filterByFrontend(){
     //Eliminar tots els children del parent card (resetejar)
     const currentCards = [...parentCards.children]
     // Resetejar tots els children del parentCard
-    for(let card of currentCards) {
+    for (let card of currentCards) {
         parentCards.removeChild(card)
     }
 
     /* cards.innerHTML = '' */
-    
+
     //Omplir el parentCards amb els uxCards
     uxCards.forEach(card => {
         parentCards.appendChild(card)
     });
 }
 
-function resetFilter(){
-    
+function resetFilter() {
+
     filters.forEach((filter) => {
         filter.classList.remove('active')
     })
@@ -354,12 +349,12 @@ function resetFilter(){
 
     const currentCards = [...parentCards.children]
     // Resetejar tots els children del parentCard
-    for(let card of currentCards) {
+    for (let card of currentCards) {
         parentCards.removeChild(card)
     }
     //Omplir el parentCards amb tots els cards
-    cards.forEach(card => {parentCards.appendChild(card)})
-    
+    cards.forEach(card => { parentCards.appendChild(card) })
+
 }
 
 
