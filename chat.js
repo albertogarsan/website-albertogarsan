@@ -145,7 +145,7 @@ function showBtn(selectBtn) {
         document.getElementById('segonaPart').style.flexDirection = 'column';
 
 
-        document.querySelector('#part2_1').textContent = 'Studies?'
+        document.querySelector('#part2_1').textContent = 'Career'
         document.querySelector('#part2_2').innerHTML = 'I currently study an Official Advanced Specific Vocational Training in Web Application Development where I am learning about Java, Python, JS code... And I studied <span>Interactive Digital Development Design at ESAT Valencia</span>  (2020-2021) and <span> Audiovisual Communication at the Polytechnic University of Valencia</span> (2014-2018).'
         document.querySelector('#part2_3').innerHTML = 'One thing that characterizes my learning is that it has been by <span>self-taught training</span>. My knowledge has increased thanks to every book, course, lecture and article.'
         document.querySelector('#part2_4').innerHTML = '<span>‘Never stop learning’</span>  could be my late motiv.'
@@ -188,7 +188,7 @@ function showBtn(selectBtn) {
         document.getElementById('terceraPart').style.flexDirection = 'column';
 
 
-        document.querySelector('#part3_1').textContent = 'Experience?'
+        document.querySelector('#part3_1').textContent = 'Experience'
 
 
         if ($(window).width() < 1024) document.querySelector('.menu__wrap').slideToggle();
@@ -238,7 +238,7 @@ function showBtn(selectBtn) {
 
         document.getElementById('quartaPart').style.display = 'flex';
         document.getElementById('quartaPart').style.flexDirection = 'column';
-        document.querySelector('#part4_1').textContent = 'Contact me!'
+        document.querySelector('#part4_1').textContent = 'Contact'
         document.querySelector('#part4_2').innerHTML = '<span>Join in</span> my vision of understanding life and feel free to talk to me for in-depht contact.'
         document.querySelector('#part4_4').innerHTML = '<span><a href="mailto:albertogarsan@outlook.com" target="_blank">Mail me</span>'
         document.querySelector('#quartaPart').querySelector('.contingut__hora').textContent = composeTime()
